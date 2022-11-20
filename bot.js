@@ -4,24 +4,15 @@ const {JsonDatabase} = require("wio.db");
 const db = new JsonDatabase("db");
 const uptime = require("moment");
 require("moment-duration-format");
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
 
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
 
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
 client.on("ready", () => {
 	console.log(" ")
 	console.log("-------------------------------------------------------------------------------")
-	console.log("Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000");
-	console.log("Bu Botun Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762");
-	console.log("-------------------------------------------------------------------------------")
 	console.log(" ")
-	let status = "aktif";
+	let status = "Bot Aktif!";
 	if (db.get("owosystemstatus") == "0") {
-		status = "aktif değil";
+		status = "Bot Aktif Değil.";
 	}
 	console.log(`${client.user.tag} olarak giriş yapıldı.`)
 	console.log("Bot çalışıyor.");
@@ -32,8 +23,6 @@ client.on("ready", () => {
 	}
 });
 
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
 setInterval(function() {
 	if (Number(db.get("securitytime")) > 10 || Number(db.get("securitytime")) < 1) {
 		db.set("securitytime", "3");
@@ -50,9 +39,6 @@ setInterval(function() {
 				console.log("Bot doğrulamaya girmemesi için "+db.get("securitytime")+" dakikalığına durdurulmuştur.")
 				console.log(" ")
 				console.log("-------------------------------------------------------------------------------");
-            	console.log("Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000");
-            	console.log("Bu Botun Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762");
-	            console.log("-------------------------------------------------------------------------------");
 				console.log(" ")
 				return;
 			}
@@ -72,9 +58,6 @@ setInterval(function() {
 				console.log("Captcha koruma süresi sona ermiştir. Bot tekrardan aktif edildi.")
 				console.log(" ")
 				console.log("-------------------------------------------------------------------------------");
-            	console.log("Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000");
-            	console.log("Bu Botun Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762");
-	            console.log("-------------------------------------------------------------------------------");
 				console.log(" ")
 				return;
 				}
@@ -83,18 +66,13 @@ setInterval(function() {
 	}
 	}
 }, 60000*Number(db.get("securitytime")));
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
+
 setInterval(function() {
 	console.log(" ")
 	console.log("-------------------------------------------------------------------------------");
-	console.log("Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000");
-	console.log("Bu Botun Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762");
-	console.log("-------------------------------------------------------------------------------");
 	console.log(" ")
 },300000);
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
+
 client.on("message", async message => {
 	if (db.get("autogive") == "1") {
 	  if (message.author.id != "408785106942164992") return; 
@@ -149,8 +127,7 @@ setInterval(function() {
 				}
 },60000*10);
 
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
+
 let hunt = ['17000', '20000', '24000', '27000']; 
 hunt = hunt[Math.floor(Math.random() * hunt.length)];
 
@@ -174,8 +151,6 @@ let daily = "3600000"
 let pray = "300000"
 
 
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
 setInterval(function(){
 	if (db.get("owosystemstatus") == "1") {
 		if (db.get("systems.whunt") == "1") {
@@ -202,8 +177,8 @@ setInterval(function(){
 	}
 	}
 }, hunt);
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
+
+
 setInterval(function(){
 	if (db.get("owosystemstatus") == "1") {
 		if (db.get("systems.wbattle") == "1") {
@@ -232,8 +207,8 @@ setInterval(function(){
 		}
 	}
 }, battle);
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
+//es
+
 setInterval(function(){
 	if (db.get("owosystemstatus") == "1") {
 		if (db.get("systems.wkiss") == "1") {
@@ -259,8 +234,8 @@ setInterval(function(){
 		}
 	}
 }, kiss);
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
+//es
+
 setInterval(function(){
 	if (db.get("owosystemstatus") == "1") {
 		if (db.get("systems.whug") == "1") {
@@ -288,9 +263,6 @@ setInterval(function(){
 }, hug);
 
 setInterval(function() {
-	console.log("-------------------------------------------------------------------------------");
-	console.log("Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000");
-	console.log("Bu Botun Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762");
 	console.log("-------------------------------------------------------------------------------");
 },1000000);
 
@@ -365,7 +337,7 @@ setInterval(function(){
 				db.add("pray", 1)
 				console.log("OwO Pray komutu kullanıldı.")
 
-				client.channels.get(db.get("channelid")).send(pray+" "+sahip+"");
+				client.channels.get(db.get("channelid")).send(pray);
 			}
 
 			if (db.get("systems.wpraycurse") == "0") {
@@ -378,7 +350,7 @@ setInterval(function(){
 				db.add("curse", 1)
 				console.log("OwO Curse komutu kullanıldı.")
 
-				client.channels.get(db.get("channelid")).send(curse+" "+sahip+"");
+				client.channels.get(db.get("channelid")).send(curse);
 			}
 
 		} else {
@@ -394,7 +366,7 @@ setInterval(function(){
 			db.add("curse", 1)
 			console.log("OwO Curse komutu kullanıldı.")
 		}
-			client.channels.get(db.get("channelid")).send(praycurse+""+sahip+"");
+			client.channels.get(db.get("channelid")).send(praycurse);
 	}
 	}
 }, pray);
