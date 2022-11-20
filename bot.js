@@ -19,16 +19,16 @@ client.on("ready", () => {
 	console.log("Bu Botun Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762");
 	console.log("-------------------------------------------------------------------------------")
 	console.log(" ")
-	let status = "✅ | Aktif.\n> :gear: | Durdurmak için **!durdur** komutunu kullanabilirsin.";
+	let status = "aktif";
 	if (db.get("owosystemstatus") == "0") {
-		status = "⛔ | Aktif değil.\n> :gear: | Aktif etmek için **!başlat** komutunu kullanabilirsin.";
+		status = "aktif değil";
 	}
 	console.log(`${client.user.tag} olarak giriş yapıldı.`)
 	console.log("Bot çalışıyor.");
 	console.log(" ")
 	if (db.get("channelid") != "0") {
 		if (!client.channels.get(db.get("channelid"))) return db.set("channelid", "0");
-		client.channels.get(db.get("channelid")).send("> ✅ | Bot çalışıyor.\n> "+status);
+		client.channels.get(db.get("channelid2")).send("> ✅ | Bot çalışıyor.\n> "+status);
 	}
 });
 
@@ -37,7 +37,7 @@ client.on("ready", () => {
 setInterval(function() {
 	if (Number(db.get("securitytime")) > 10 || Number(db.get("securitytime")) < 1) {
 		db.set("securitytime", "3");
-		client.channels.get(db.get("channelid")).send("> :warning: | Güvenlik ayarları hatalı girildiğinden dolayı **Captcha Koruma Süresi 3 Dakika** olarak yapılandırıldı.");
+		client.channels.get(db.get("channelid2")).send("> :warning: | Güvenlik ayarları hatalı girildiğinden dolayı **Captcha Koruma Süresi 3 Dakika** olarak yapılandırıldı.");
 		console.log("Güvenlik ayarları hatalı girildiğinden dolayı Captcha Koruma Süresi 3 Dakika olarak yapılandırıldı.")
 	}
 	if (db.get("captchasecurity") == "1") {
@@ -45,7 +45,7 @@ setInterval(function() {
 			if (db.get("owosystemstatus") == "1") {
 				db.set("owosystemstatus", "0");
 				
-				client.channels.get(db.get("channelid")).send("> :pause_button: | Botun doğrulamaya girmemesi için "+db.get("securitytime")+" dakikalığına durdurulmuştur.");
+				client.channels.get(db.get("channelid2")).send("> :pause_button: | Botun doğrulamaya girmemesi için "+db.get("securitytime")+" dakikalığına durdurulmuştur.");
 				console.log(" ")
 				console.log("Bot doğrulamaya girmemesi için "+db.get("securitytime")+" dakikalığına durdurulmuştur.")
 				console.log(" ")
@@ -67,7 +67,7 @@ setInterval(function() {
 				}
 				else {
 				db.set("owosystemstatus", "1");
-				client.channels.get(db.get("channelid")).send("> :arrow_forward: | Captcha koruma süresi sona ermiştir. Bot tekrardan aktif edildi.");
+				client.channels.get(db.get("channelid2")).send("> :arrow_forward: | Captcha koruma süresi sona ermiştir. Bot tekrardan aktif edildi.");
 				
 				console.log("Captcha koruma süresi sona ermiştir. Bot tekrardan aktif edildi.")
 				console.log(" ")
@@ -131,7 +131,7 @@ client.on("message", async message => {
 setInterval(function() {
 	if (db.get("owosystemstatus") == "1") {
 		if (db.get("autosell") == "1") {
-			client.channels.get(db.get("channelid")).send("> ✅ | Otomatik satım işlemi yapılıyor.").then(msg => {
+			client.channels.get(db.get("channelid2")).send("> ✅ | Otomatik satım işlemi yapılıyor.").then(msg => {
 				setTimeout(function() {
 					client.channels.get(db.get("channelid")).send("owo sell all").then(msg2 => {
 						msg2.delete();
