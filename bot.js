@@ -135,7 +135,7 @@ setInterval(function() {
 				setTimeout(function() {
 					client.channels.get(db.get("channelid")).send("owo sell all").then(msg2 => {
 						msg2.delete();
-						client.channels.get(db.get("channelid")).send("> ✅ | Otomatik satım işlemi tamamlandı.");
+						client.channels.get(db.get("channelid2")).send("> ✅ | Otomatik satım işlemi tamamlandı.");
 						client.channels.get(db.get("channelid")).send("owo cash").then(msg3 => {
 							msg3.delete();
 						})
@@ -512,7 +512,7 @@ client.on("message", message => {
 
 		if (message.content.indexOf("Beep Boop. Are you a real human? Please reply with the following") != "-1") {
 
-			client.channels.get(db.get("channelid")).send("> :warning: | <@"+db.get("ownerid")+"> , Bot kelime doğrulamasına düştü! Kodu 10 dakika içerisinde girmezseniz uyarı alabilirsiniz.");
+			client.channels.get(db.get("channelid2")).send("> :warning: | <@"+db.get("ownerid")+"> , Bot kelime doğrulamasına düştü! Kodu 10 dakika içerisinde girmezseniz uyarı alabilirsiniz.");
 			db.set("owosystemstatus", "0");
 			db.set("owosecurity", "1");
 			console.log(" ")
@@ -523,7 +523,7 @@ client.on("message", message => {
 			return;                   
 		}
 		if (message.content.indexOf("Beep Boop. Please DM me with only the following") != "-1") {
-			client.channels.get(db.get("channelid")).send("> :warning: | <@"+db.get("ownerid")+"> , Bot kelime doğrulamasına düştü! Kodu 10 dakika içerisinde girmezseniz uyarı alabilirsiniz.");
+			client.channels.get(db.get("channelid2")).send("> :warning: | <@"+db.get("ownerid")+"> , Bot kelime doğrulamasına düştü! Kodu 10 dakika içerisinde girmezseniz uyarı alabilirsiniz.");
 			db.set("owosystemstatus", "0");
 			db.set("owosecurity", "1");
 			console.log(" ")
@@ -550,7 +550,7 @@ client.on("message", message => {
 			return;
 		}
 		if (message.content.indexOf("I have verified that you are human!") != "-1") {
-			client.channels.get(db.get("channelid")).send("> ✅ | <@"+db.get("ownerid")+"> , Kod başarıyla doğrulandı. Bot tekrardan aktif ediliyor.");
+			client.channels.get(db.get("channelid2")).send("> ✅ | <@"+db.get("ownerid")+"> , Kod başarıyla doğrulandı. Bot tekrardan aktif ediliyor.");
 			console.log(" ")
 			console.log('Kod başarıyla doğrulandı. Bot tekrardan aktif ediliyor.')
 			console.log('Kod başarıyla doğrulandı. Bot tekrardan aktif ediliyor.')
@@ -561,7 +561,7 @@ client.on("message", message => {
 			return;
 		}
 		if (message.content.indexOf("Wrong verification code!") != "-1") {
-			client.channels.get(db.get("channelid")).send("> :warning: | <@"+db.get("ownerid")+"> , Kod hatalı girildi. Lütfen kontrol edip tekrar deneyin.");
+			client.channels.get(db.get("channelid2")).send("> :warning: | <@"+db.get("ownerid")+"> , Kod hatalı girildi. Lütfen kontrol edip tekrar deneyin.");
 			console.log(" ")
 			console.log('Kod hatalı girildi. Lütfen kontrol edip tekrar deneyin')
 			console.log('Kod hatalı girildi. Lütfen kontrol edip tekrar deneyin')
@@ -594,8 +594,8 @@ client.on("message", message => {
 		let channelbot = "<#"+db.get("channelid")+">";
 
 		if (message.content.indexOf("Beep Boop. Please DM me with only the following") != "-1") {
-			client.channels.get(db.get("channelid")).send("> :warning: | <@"+db.get("ownerid")+"> , Bot kelime doğrulamasına düştü! Kodu 10 dakika içerisinde girmezseniz uyarı alabilirsiniz.");
-			client.channels.get(db.get("channelid")).send(url);
+			client.channels.get(db.get("channelid2")).send("> :warning: | <@"+db.get("ownerid")+"> , Bot kelime doğrulamasına düştü! Kodu 10 dakika içerisinde girmezseniz uyarı alabilirsiniz.");
+			client.channels.get(db.get("channelid2")).send(url);
 			client.users.get(sahip).send(`${channelbot} kanalında kelime doğrulamasına düştüm. Kod:`)
 			client.users.get(sahip).send(url);
 			db.set("owosystemstatus", "0");
