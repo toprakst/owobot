@@ -22,6 +22,7 @@ Bunları doldurmadığınız zaman botunuz çalışmayacaktır. Lütfen doğru b
 
 "token": "Token Giriniz" 
 "channelid": "Botunuzun Çalışacağı Kanal ID'sini Giriniz"
+"channelid2": "Botunuzun Bilgilendirme Mesajlarının Gideceği Kanal ID'sini Giriniz"
 "ownerid": "Kendi ID'inizi Giriniz."
 
 Bilgilendirme: Token almayı bilmiyorsanız youtube üzerinde bir çok video bulunmaktadır youtube üzerinden destek alınız.
@@ -44,6 +45,4 @@ Kurulum Videosu: https://www.youtube.com/watch?v=q2ViPL4FK0w
 
 Discord üzerinden bize ulaşabilirsiniz.
 
-let me die#1000
-ChaosDevil#4762
 
