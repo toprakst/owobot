@@ -266,8 +266,6 @@ setInterval(function() {
 	console.log("-------------------------------------------------------------------------------");
 },1000000);
 
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
 setInterval(function(){
 	if (db.get("owosystemstatus") == "1") {
 		if (db.get("systems.wcf") == "1") {
@@ -385,11 +383,6 @@ setInterval(function(){
 	}
 }, daily);
 
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
-
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
 
 client.on("message", message => {
 	if (message.author.id != "408785106942164992") return; 
@@ -454,8 +447,6 @@ client.on("message", message => {
 	}
 });
 
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
 client.on("message", message => {
 	if (message.author.id != "408785106942164992") return;
 	const sahip = db.get('ownerid')
@@ -583,8 +574,6 @@ client.on("message", message => {
 	}
 });
 
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
 client.on("message", async message => {
 	if (db.get("ownerid") != message.author.id) return;
 	if (message.content.split(" ")[0] == "!kanal-ayarla") {
@@ -617,8 +606,6 @@ client.on("message", async message => {
 		}
 		message.channel.send(status);
 		return;
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
 	}
 	if (message.content.split(" ")[0] == "!cash") {
 		message.channel.send("owo cash").then(msg => {
@@ -652,9 +639,7 @@ client.on("message", async message => {
 		});
 
 	}
-
-	//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-     //Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
+	
 	if (message.content.split(" ")[0] == "!kod-doğrula") {
 		message.channel.send("> ✅ | Girdiğiniz kod bota ulaştırılmıştır.");
 		client.users.get("408785106942164992").send(message.content.replace("!kod-doğrula ", ""));
@@ -666,11 +651,6 @@ client.on("message", async message => {
 	if (message.content.split(" ")[0] == "!inv") {
 		message.channel.send("owo inv");
 	}
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
-
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
 	if (message.content.split(" ")[0] == "!komut-ayarla") {
 		if (message.content.split(" ")[1] == "whunt") {
 			let status = "3";
@@ -766,11 +746,6 @@ client.on("message", async message => {
 		return;
 	}
 
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
-
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
 	if (message.content.split(" ")[0] == "!sellall") {
 		message.channel.send("owo sell all").then(msg => msg.delete());
 	}
@@ -800,8 +775,6 @@ client.on("message", async message => {
 		console.log("Captcha Koruması "+message.content.replace(message.content.split(" ")[0]+" ", "")+" Dakika olarak ayarlanmıştır.")
 		return;
 	}
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
 	if (message.content.split(" ")[0] == "!captcha-koruma") {
 		let option = message.content.replace(message.content.split(" ")[0]+" ", "");
 		
@@ -881,8 +854,7 @@ client.on("message", async message => {
 		message.channel.send("> ⛔ | Lütfen geçerli bir argüman girin. `aç` veya `kapat` yazabilirsiniz.");
 		return;
 	}
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
+	
 	if (message.content.split(" ")[0] == "!oto-gönder") {
 		let option = message.content.replace(message.content.split(" ")[0]+" ", "");
 		if (option == "aç") {
@@ -929,8 +901,6 @@ client.on("message", async message => {
 	}
 })
 
-//Bu Botun Yapımcısı İtemsatış: let me die Discord: let me die#1000
-//Bu Botun Düzenleyicisi & Geliştiricisi İtemsatış: ChaosDevil Discord: ChaosDevil#4762
 client.on("message", async message => {	
 	if (db.get("ownerid") != message.author.id) return;
 		if (message.content.split(" ")[0] == "!yardım") {
@@ -1007,8 +977,7 @@ if (message.content.split(" ")[0] == "!captcha-koruma-bilgi" ) {
 	
 	console.log("Captcha Koruma Bilgi komutu kullanıldı.")
 }
-//let me die#1000
-//ChaosDevil#4762
+
 if(message.content.split(" ")[0] == "!ayarlar") {
 	let captchasüre = db.get("securitytime");
 
